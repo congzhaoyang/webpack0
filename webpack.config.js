@@ -30,7 +30,7 @@ module.exports = {
       template: 'index.html',
       inject: 'body', //script标签放在哪里
       title: 'index1', //指定生成页面title
-      // chunks: ['main1'] // 指定只引入哪个JS
+      chunks: ['main', 'main1'] // 指定只引入哪个JS
       // date: new Date(),
       // minify: {
       //   removeComments: true, //删除注释
@@ -43,7 +43,7 @@ module.exports = {
       template: 'index.html',
       inject: 'body', //script标签放在哪里
       title: 'index2', //指定生成页面title
-      // chunks: ['main2']
+      chunks: ['main', 'main2']
       // date: new Date(),
       // minify: {
       //   removeComments: true,
@@ -56,7 +56,7 @@ module.exports = {
       template: 'index.html',
       inject: 'body', //script标签放在哪里
       title: 'index3', //指定生成页面title
-      // chunks: ['main3']
+      chunks: ['main', 'main3']
       // date: new Date(),
       // minify: {
       //   removeComments: true,
