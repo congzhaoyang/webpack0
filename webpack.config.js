@@ -21,7 +21,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: 'js/[name]-[chunkhash].js', //版本号，MD5值 ,js指定文件路径
-    //publicPath: 'http://cdn.com/' //上线路径设置
+    publicPath: 'http://cdn.com/' //上线路径设置
   },
 
   plugins: [
@@ -30,7 +30,8 @@ module.exports = {
       template: 'index.html',
       inject: 'body', //script标签放在哪里
       title: 'index1', //指定生成页面title
-      chunks: ['main', 'main1'] // 指定只引入哪个JS
+      //chunks: ['main1'], // 指定引入chunks
+      excludeChunks: ['main3'] // 指定排除的chunks
       // date: new Date(),
       // minify: {
       //   removeComments: true, //删除注释
